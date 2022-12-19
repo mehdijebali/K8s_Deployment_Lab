@@ -9,5 +9,5 @@ selector:
     matchExpressions:
       - {key: tier, operator: In, values: [frontend]}
 ```
-ReplicaSet is not limited to owning Pods speciﬁed by its template-- it can acquire other Pods which have matching Labels.
+ReplicaSet is not limited to owning Pods speciﬁed by its template: It can acquire other Pods which have matching Labels.
 ## Deployment
