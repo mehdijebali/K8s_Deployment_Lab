@@ -18,3 +18,27 @@ Deployment is one step higher than ReplicaSet. It means the desired state of Rep
 - Rolling Upgrade: Upgrade Application in Zero Downtime.
 - Rollback: Rollback the Upgrade in case of unstable Upgrade. Revise the Deployment State.
 - Pause/Resume Deployment: Rollout a certain percentage.
+## Instructions
+1. Clone the project 
+```
+git clone https://github.com/mehdijebali/K8s_Deployment_Lab.git
+```
+2. Apply manifest using **kubectl**
+```
+kubectl apply -f /path/to/manifest.yml
+```
+3. You can check the status of pod/service with the following command
+```
+kubecl get pods | grep <pod_name>
+```
+```
+kubectl get deployments | grep <deployment_name>
+```
+4. You can also list additional information of pod (service) for any debugging issue
+```
+kubectl describe pod <pod_name>
+```
+```
+kubectl describe deployment <deployment_name>
+```
+The **<pod_name> (<deployment_name>)** is the value of the key `metadata.name` in each k8s manifest yaml file.
